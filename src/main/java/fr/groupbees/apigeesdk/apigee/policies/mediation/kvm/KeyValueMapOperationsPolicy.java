@@ -17,6 +17,10 @@ public class KeyValueMapOperationsPolicy extends Policy {
   @JsonProperty(value = "mapIdentifier")
   private String mapIdentifier;
 
+  @JacksonXmlProperty(isAttribute = true, localName = "MapName")
+  @JsonProperty(value = "mapName")
+  private MapName mapName;
+
   @JacksonXmlProperty(localName = "Scope")
   @JsonProperty(value = "scope")
   private KVMScope scope;
