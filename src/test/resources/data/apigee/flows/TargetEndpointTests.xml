@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TargetEndpoint name="target">
     <Description>description</Description>
+    <DefaultFaultRule name="default-faultrule"/>
     <PreFlow name="pre-flow">
         <Request/>
         <Response/>
@@ -9,7 +10,6 @@
         <Request/>
         <Response/>
     </PostFlow>
-    <DefaultFaultRule name="default-faultrule"/>
     <LocalTargetConnection/>
     <HTTPTargetConnection/>
     <ScriptTarget>

@@ -14,6 +14,10 @@ public class MessageLoggingPolicy extends Policy {
     @JsonProperty(value = "file")
     private File file;
 
+    @JacksonXmlProperty(localName = "CloudLogging")
+    @JsonProperty(value = "cloudLogging")
+    private CloudLogging cloudLogging;
+
     @JacksonXmlProperty(localName = "Syslog")
     @JsonProperty(value = "syslog")
     private Syslog syslog;

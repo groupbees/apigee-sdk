@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ProxyEndpoint name="proxy">
     <Description>proxy description</Description>
+    <DefaultFaultRule name="default-faultrule"/>
     <PreFlow name="pre-flow">
         <Request/>
         <Response/>
@@ -9,7 +10,6 @@
         <Request/>
         <Response/>
     </PostFlow>
-    <DefaultFaultRule name="default-faultrule"/>
     <PostClientFlow name="post-client-flow">
         <Description>post-client-flow-desc</Description>
         <Response>
