@@ -3,11 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <name>Apigee-SDK</name>
+
+    <description>
+        Java SDK for Apigee to build an Api Proxy package.
+    </description>
+
+    <url>https://github.com/groupbees/apigee-sdk</url>
 
     <groupId>fr.groupbees</groupId>
     <artifactId>apigee-sdk</artifactId>
-    <name>apigee-sdk</name>
     <version>1.0.0</version>
+
     <packaging>jar</packaging>
 
     <organization>
@@ -36,6 +43,19 @@
         <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
     </properties>
+
+    <inceptionYear>2025</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <prerequisites>
+        <maven>3.6.2</maven>
+    </prerequisites>
 
     <distributionManagement>
         <snapshotRepository>
