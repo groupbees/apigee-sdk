@@ -18,6 +18,7 @@ import org.xmlunit.matchers.CompareMatcher;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -48,7 +49,7 @@ public class ProxyEndpointTests {
                         "post-client-flow",
                         "post-client-flow-desc",
                         new Steps(
-                                new LinkedHashSet<>(
+                                new LinkedList<>(
                                         Arrays.asList(
                                                 new Step("postcf-res-step1-name", "postcf-res-step1-cond"),
                                                 new Step("postcf-res-step2-name")

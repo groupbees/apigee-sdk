@@ -11,10 +11,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.xmlunit.matchers.CompareMatcher;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
+import java.util.*;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -43,7 +40,7 @@ public class FlowTests {
                 "flow-name",
                 "flow-description",
                 "flow-condition",
-                new Steps(new LinkedHashSet<>(Arrays.asList(
+                new Steps(new LinkedList<>(Arrays.asList(
                         new Step(
                                 "request-step1-name",
                                 "request-step1-condition"
@@ -53,7 +50,7 @@ public class FlowTests {
                                 "request-step2-condition"
                         )
                 ))),
-                new Steps(new LinkedHashSet<>(Collections.singletonList(
+                new Steps(new LinkedList<>(Collections.singletonList(
                         new Step(
                                 "response-step-name",
                                 "response-step-condition"

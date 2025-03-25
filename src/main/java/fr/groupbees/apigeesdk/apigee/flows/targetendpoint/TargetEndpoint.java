@@ -20,11 +20,11 @@ import java.util.LinkedHashSet;
 @JacksonXmlRootElement(localName = "TargetEndpoint")
 @JsonPropertyOrder({
         "description",
+        "faultRules",
+        "defaultFaultRule",
         "preFlow",
         "flows",
         "postFlow",
-        "faultRules",
-        "defaultFaultRule",
         "localTargetConnection",
         "httpTargetConnection",
         "scriptTarget"

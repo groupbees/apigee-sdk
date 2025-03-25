@@ -17,11 +17,11 @@ import java.util.LinkedHashSet;
 @JacksonXmlRootElement(localName = "ProxyEndpoint")
 @JsonPropertyOrder({
         "description",
+        "faultRules",
+        "defaultFaultRule",
         "preFlow",
         "flows",
         "postFlow",
-        "faultRules",
-        "defaultFaultRule",
         "postClientFlow",
         "httpProxyConnection",
         "routeRules"
@@ -35,6 +35,15 @@ public class ProxyEndpoint {
     @JacksonXmlProperty(localName = "Description")
     @JsonProperty(value = "description")
     private String description;
+
+    @JacksonXmlProperty(localName = "DefaultFaultRule")
+    @JsonProperty(value = "defaultFaultRule")
+    private DefaultFaultRule defaultFaultRule;
+
+    @JacksonXmlElementWrapper(localName = "FaultRules")
+    @JacksonXmlProperty(localName = "FaultRule")
+    @JsonProperty(value = "faultRules")
+    private LinkedHashSet<FaultRule> faultRules = new LinkedHashSet<>();
 
     @JacksonXmlProperty(localName = "PreFlow")
     @JsonProperty(value = "preFlow")
@@ -52,15 +61,6 @@ public class ProxyEndpoint {
     @JacksonXmlProperty(localName = "PostClientFlow")
     @JsonProperty(value = "postClientFlow")
     private PostClientFlow postClientFlow;
-
-    @JacksonXmlProperty(localName = "DefaultFaultRule")
-    @JsonProperty(value = "defaultFaultRule")
-    private DefaultFaultRule defaultFaultRule;
-
-    @JacksonXmlElementWrapper(localName = "FaultRules")
-    @JacksonXmlProperty(localName = "FaultRule")
-    @JsonProperty(value = "faultRules")
-    private LinkedHashSet<FaultRule> faultRules = new LinkedHashSet<>();
 
     @JacksonXmlProperty(localName = "HTTPProxyConnection")
     @JsonProperty(value = "httpProxyConnection")

@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.stream.Collectors;
 
 @Data
@@ -20,7 +21,7 @@ public class Steps {
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "Step")
     @JsonProperty(value = "step")
-    private LinkedHashSet<Step> steps = new LinkedHashSet<>();
+    private LinkedList<Step> steps = new LinkedList<>();
 
     public void appendSteps(final Step... step) {
         this.steps.addAll(Arrays.asList(step));
@@ -31,14 +32,14 @@ public class Steps {
     }
 
     public void prependSteps(final Step... steps) {
-        LinkedHashSet<Step> newSteps = new LinkedHashSet<>();
+        LinkedList<Step> newSteps = new LinkedList<>();
         newSteps.addAll(Arrays.asList(steps));
         newSteps.addAll(this.steps);
         this.steps = newSteps;
     }
 
     public void prependSteps(final Policy... policy) {
-        LinkedHashSet<Step> newSteps = Arrays.stream(policy).map(Step::new).collect(Collectors.toCollection(LinkedHashSet::new));
+        LinkedList<Step> newSteps = Arrays.stream(policy).map(Step::new).collect(Collectors.toCollection(LinkedList::new));
         newSteps.addAll(this.steps);
         this.steps = newSteps;
     }
