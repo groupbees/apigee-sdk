@@ -6,6 +6,7 @@
 
     <groupId>fr.groupbees</groupId>
     <artifactId>apigee-sdk</artifactId>
+    <name>apigee-sdk</name>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
