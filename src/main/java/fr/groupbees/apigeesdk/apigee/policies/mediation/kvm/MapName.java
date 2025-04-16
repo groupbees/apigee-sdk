@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class MapName {
 
-  @JacksonXmlProperty(isAttribute = true, localName = "Ref")
+  @JacksonXmlProperty(isAttribute = true, localName = "ref")
   @JsonProperty(value = "ref")
   private String ref;
 
